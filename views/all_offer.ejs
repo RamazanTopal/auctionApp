@@ -1,0 +1,33 @@
+<%- include('partials/_header') -%>
+<body>
+    <%- include('partials/_navigation') -%>
+    <div class="container">
+        <div class="col-md-10">
+            <table class="table table-dark">
+                <thead>
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Product Name</th>
+                    <th scope="col">Price</th>
+                    <th scope="col">Owner Name</th>
+                    <th scope="col">Offer Price</th>
+                    <th scope="col">Customer ID</th>
+                  </tr>
+                </thead>
+                <tbody>
+                    <% for (let i=0; i< products.offerer.length; i++) { %>
+                        <tr>
+                            <th scope="row"><%=products._id%></th>
+                            <td><%=products.name%></td>
+                            <td><%=products.price%></td>
+                            <td><%=products.owner.name%></td>
+                            <td><%=products.offerer[i].price%></td>
+                            <td><%=products.offerer[i].name%></td>
+                        </tr>
+                    <%}%>
+                </tbody>
+              </table>
+        </div>
+    </div>
+</body>
+</html>
